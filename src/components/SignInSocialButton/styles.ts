@@ -6,7 +6,7 @@ export const Button = styled(RectButton)`
   height: ${RFValue(56)}px;
 
   background-color: ${({ theme }) => theme.colors.shape};
-  border-radius: 5px;
+  border-radius: 8px;
 
   align-items: center;
   flex-direction: row;
