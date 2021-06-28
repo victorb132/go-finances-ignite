@@ -46,12 +46,12 @@ export function Register() {
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
 
   const { user } = useAuth();
-
+  
   const [category, setCategory] = useState({
     key: 'category',
     name: 'Categoria'
   });
-
+  
   const navigation = useNavigation();
 
   const {
@@ -165,6 +165,7 @@ export function Register() {
             </TransactionsTypes>
 
             <CategorySelectButton
+              testID="button-category"
               title={category.name}
               onPress={handleOpenSelectCategoryModal}
             />
@@ -176,7 +177,7 @@ export function Register() {
           />
         </Form>
 
-        <Modal visible={categoryModalOpen}>
+        <Modal testID="modal-category" visible={categoryModalOpen}>
           <CategorySelect
             category={category}
             setCategory={setCategory}
